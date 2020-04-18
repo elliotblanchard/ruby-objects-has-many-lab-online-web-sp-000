@@ -1,3 +1,4 @@
+
 class Author
   attr_accessor :name
 
@@ -12,6 +13,10 @@ class Author
   def add_post_by_title(title)
     post = Post.new(title)
     add_post(post)
+  end
+
+  def posts
+    Post.all.select {|post| post.artist == self}
   end
 
   def self.post_count
