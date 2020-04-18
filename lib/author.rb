@@ -15,6 +15,6 @@ class Author
   end
 
   def self.post_count
-    Pong.all.length
+    Post.all.length
   end
 end
