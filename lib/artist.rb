@@ -2,6 +2,8 @@
 class Artist
   attr_accessor :name
 
+  @@album_count = 0
+
   def initialize(name)
     @name = name
   end
@@ -17,5 +19,9 @@ class Artist
 
   def songs
     Song.all.select {|song| song.artist == self}
+  end
+
+  def self.song_count
+
   end
 end
